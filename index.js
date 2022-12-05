@@ -1,4 +1,4 @@
-import Book from './modules/books.js'
+import Book from './modules/books.js';
 import Collection from './modules/collection.js';
 
 const lib = new Collection();
@@ -60,7 +60,7 @@ navList.forEach((li) => {
     li.classList.add('nav-active');
     const sectionList = document.querySelectorAll('section');
     sectionList.forEach((sec) => { sec.classList.add('hide'); });
-    sectionList [
+    sectionList[
       Array.prototype.indexOf.call(li.parentElement.children, li)
     ].classList.remove('hide');
   });
