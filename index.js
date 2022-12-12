@@ -1,5 +1,6 @@
 import Book from './modules/books.js';
 import Collection from './modules/collection.js';
+import { DateTime } from './modules/luxon.js';
 
 const lib = new Collection();
 lib.insertBook(new Book('Lorem Ipsum', 'Albert Noman'));
@@ -65,3 +66,9 @@ navList.forEach((li) => {
     ].classList.remove('hide');
   });
 });
+
+  const date = document.createElement('div');
+  date.classList.add('nav-date');
+  date.innerHTML = DateTime.now().toLocaleString(DateTime.DATE_HUGE);
+  document.querySelector('.nav-container').appendChild(date);
+  
